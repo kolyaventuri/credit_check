@@ -76,16 +76,6 @@ class CardTest < Minitest::Test
     end
   end
 
-  # def test_card_object_calculates_checksum_correctly
-  #   @all_cards.each.with_index do |card_number, index|
-  #     card = Card.new(card_number)
-  #     doubled = card.double_digits
-  #     summed_10 = card.sum_over_10(doubled)
-  #     summed = card.sum_array(summed_10)
-  #     assert_equal @all_check_digits[index], card.get_check_digit(summed)
-  #   end
-  # end
-
   def test_valid_card_object_returns_valid
     @valid_cards.each.with_index do |card_number, index|
       card = Card.new(card_number)
