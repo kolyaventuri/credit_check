@@ -31,10 +31,7 @@ class Card
     # digit 10 or greater
     digit_array.map do | value |
       if value > 9
-        character_array = value.to_s.split("") # Turn into string and split into character array
-        int_array = character_array.map { |char| char.to_i } # Map characters to integers
-        sum = int_array.reduce(0, :+) # Sum array
-        sum
+        value - 9 # [10-18] - 9 == [1, 9] (same as summing 2 digits)
       else
         value
       end
